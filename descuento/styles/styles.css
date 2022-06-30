@@ -85,7 +85,7 @@ svg {
 
 .main-section {
     width: 90%;
-    height: 95vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     margin: 30px auto;
