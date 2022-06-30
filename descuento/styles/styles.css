@@ -1,0 +1,239 @@
+:root {
+    --sm: 12px;
+    --md: 14px;
+    --lg: 18px;
+    --color: white;
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+body {
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+svg {
+    fill: var(--color);
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    height: 10vh;
+    box-shadow: 0px 3px 3px #333;
+    justify-content: space-between;
+    padding: 0px 8px;
+}
+
+.header-logo {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo .header-title {
+    font-size: var(--lg);
+    color: var(--color);
+    margin-right: 4px;
+}
+
+.header-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-nav {
+    width: 55%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-items li {
+    font-size: var(--md);
+    transition: all 500ms;
+}
+
+.nav-items li:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.nav-items li a {
+    color: var(--color);
+    text-decoration: none;
+    padding: 3px;
+}
+
+.nav-items li a:hover {
+    color: #333;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.main-section {
+    width: 90%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 5px 8px #333;
+    padding: 20px;
+}
+
+.main-section-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.main-section-content h2 {
+    color: var(--color);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 0px 3px 3px #693a04;
+}
+
+.main-section-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.main-section-label {
+    font-size: var(--md);
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    display: block;
+}
+
+.main-section-latest-tag {
+    margin-top: 20px;
+}
+
+.main-section-input-container {
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section-input {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    color: white;
+    outline: none;
+}
+
+.main-section-input-container input[type=number]  { 
+    -moz-appearance:textfield; 
+}
+
+.main-section-button {
+    width: 100%;
+    max-width: 320px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: var(--md);
+    letter-spacing: 1px;
+    color: var(--color);
+    box-shadow: 0px 1px 8px #333;
+    cursor: pointer;
+}
+
+.main-section-button:hover {
+    box-shadow: 0px 0px 3px #ccc inset;
+}
+
+.main-section-content-result {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.main-section-content-result p {
+    color: #333;
+    font-size: var(--md);
+    font-weight: bold;
+    text-align: center;
+}
+
+.main-section-content-result p:nth-child(2) {
+    margin: 10px 0px;
+}
+
+@media (min-width:500px) {
+    .header-logo {
+        width: auto;
+    }
+
+    .header-svg {
+        margin-left: 10px;
+    }
+
+    .header-svg svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header-nav {
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .nav-items li a {
+        padding: 0px 10px;
+    }
+
+    .main-section {
+        max-width: 470px;
+        height: 80vh;
+    }
+
+    .main-section-input-container {
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .main-section-input {
+        width: 80%;
+    }
+
+    .main-section-button {
+        margin: 20px auto;
+        display: block;
+    }
+}

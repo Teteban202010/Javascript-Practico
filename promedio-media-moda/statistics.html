@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="shortcut icon" href="./assets/icons/calculator.svg" type="img">
+    <title>Promedio mediana y moda</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <span>Estadistica</span>
+            <span class="header-calculator">
+                <svg width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path class="color-calculator" d="M336 0h-288C22.38 0 0 22.38 0 48v416C0 489.6 22.38 512 48 512h288c25.62 0 48-22.38 48-48v-416C384 22.38 361.6 0 336 0zM64 208C64 199.2 71.2 192 80 192h32C120.8 192 128 199.2 128 208v32C128 248.8 120.8 256 112 256h-32C71.2 256 64 248.8 64 240V208zM64 304C64 295.2 71.2 288 80 288h32C120.8 288 128 295.2 128 304v32C128 344.8 120.8 352 112 352h-32C71.2 352 64 344.8 64 336V304zM224 432c0 8.801-7.199 16-16 16h-128C71.2 448 64 440.8 64 432v-32C64 391.2 71.2 384 80 384h128c8.801 0 16 7.199 16 16V432zM224 336c0 8.801-7.199 16-16 16h-32C167.2 352 160 344.8 160 336v-32C160 295.2 167.2 288 176 288h32C216.8 288 224 295.2 224 304V336zM224 240C224 248.8 216.8 256 208 256h-32C167.2 256 160 248.8 160 240v-32C160 199.2 167.2 192 176 192h32C216.8 192 224 199.2 224 208V240zM320 432c0 8.801-7.199 16-16 16h-32c-8.799 0-16-7.199-16-16v-32c0-8.801 7.201-16 16-16h32c8.801 0 16 7.199 16 16V432zM320 336c0 8.801-7.199 16-16 16h-32c-8.799 0-16-7.199-16-16v-32C256 295.2 263.2 288 272 288h32C312.8 288 320 295.2 320 304V336zM320 240C320 248.8 312.8 256 304 256h-32C263.2 256 256 248.8 256 240v-32C256 199.2 263.2 192 272 192h32C312.8 192 320 199.2 320 208V240zM320 144C320 152.8 312.8 160 304 160h-224C71.2 160 64 152.8 64 144v-64C64 71.2 71.2 64 80 64h224C312.8 64 320 71.2 320 80V144z"/></svg>
+            </span>
+        </div>
+        <h1 class="header-title">Promedio mediana y moda</h1>
+        <nav class="header-nav">
+            <ul class="nav-items">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../descuento/discount.html">Descuentos</a>
+                </li>
+                <li>
+                    <a href="../figuras/figure.html">Figuras</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section class="section-promedio" id="promedio">
+            <div class="section-promedio-content">
+                <h2 class="section-promedio-title">Promedio</h2>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" width="50px"><path class="section-svg" d="M41 41.95H9Q7.8 41.95 6.9 41.05Q6 40.15 6 38.95V9Q6 7.8 6.9 6.9Q7.8 6 9 6H41Q42.2 6 43.1 6.9Q44 7.8 44 9V38.95Q44 40.15 43.1 41.05Q42.2 41.95 41 41.95ZM9 16.05H41V9Q41 9 41 9Q41 9 41 9H9Q9 9 9 9Q9 9 9 9ZM16.5 19.05H9V38.95Q9 38.95 9 38.95Q9 38.95 9 38.95H16.5ZM33.5 19.05V38.95H41Q41 38.95 41 38.95Q41 38.95 41 38.95V19.05ZM30.5 19.05H19.5V38.95H30.5Z"/></svg>
+                </span>
+            </div>
+            <form action="">
+                <label class="section-promedio-label" for="inputPromedioNumero">
+                    Ingrese los numeros a calcular el promedio, para añadir como  numero limpia la caja, escribe el nuevo numero que quieres y dale al boton de enviar numero a la lista
+                </label>
+                <div class="section-promedio-input">
+                    <input id="inputPromedioNumero" placeholder="Ej: 12" type="number">
+                </div>
+                <button class="section-promedio-button" type="button" onclick="addArrayPromedio()">
+                    Enviar numero a la lista
+                </button>
+                <div class="section-promedio-content">
+                    <p id="listPromedio"></p>
+                </div>
+                <button class="section-promedio-button" type="button" onclick="calcularPromedio()">
+                    Calcular promedio
+                </button>
+                <div class="section-promedio-content">
+                    <p>Resultado:</p>
+                    <p id="resultPromedio"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="section-mediana" id="mediana">
+            <div class="section-mediana-content">
+                <h2 class="section-mediana-title">Mediana</h2>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" width="50px"><path class="section-svg" d="M9 42Q7.8 42 6.9 41.1Q6 40.2 6 39V9Q6 7.8 6.9 6.9Q7.8 6 9 6H39Q40.2 6 41.1 6.9Q42 7.8 42 9V39Q42 40.2 41.1 41.1Q40.2 42 39 42ZM9 39H39Q39 39 39 39Q39 39 39 39V9Q39 9 39 9Q39 9 39 9H9Q9 9 9 9Q9 9 9 9V39Q9 39 9 39Q9 39 9 39ZM14.2 34.15H17.2V23.9H14.2ZM30.8 34.15H33.8V13.15H30.8ZM22.5 34.15H25.5V28.25H22.5ZM22.5 23.9H25.5V20.9H22.5ZM9 39Q9 39 9 39Q9 39 9 39V9Q9 9 9 9Q9 9 9 9Q9 9 9 9Q9 9 9 9V39Q9 39 9 39Q9 39 9 39Z"/></svg>
+                </span>
+            </div>
+            <form action="">
+                <label class="section-mediana-label" for="inputMediana"> 
+                    Ingrese los numeros a calcular la mediana, en el mismo espacio ponga todos los numero y separelos con comas " , "
+                </label>
+                <div class="section-mediana-input"> 
+                    <input id="inputMediana" type="text" placeholder="Ej: 10, 20, 30" >
+                </div>
+                <button class="section-mediana-button" type="button" onclick="calcularMediana()">Calcular la Mediana</button>
+                <div class="section-mediana-content">
+                    <p>Resultado:</p>
+                    <p id="resultadoMediana"></p>
+                </div>
+            </form>   
+        </section>
+
+        <section class="section-moda" id="moda">
+            <div class="section-moda-content">
+                <h2 class="section-moda-title">Moda</h2>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" width="50px"><path class="section-svg" d="M25.5 22.5H40.95Q40.4 16.4 36.025 11.925Q31.65 7.45 25.5 7.05ZM22.5 40.95V7.05Q15.95 7.6 11.475 12.5Q7 17.4 7 24Q7 30.6 11.475 35.5Q15.95 40.4 22.5 40.95ZM25.5 40.95Q31.65 40.55 36.025 36.075Q40.4 31.6 40.95 25.5H25.5ZM24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24ZM24 44Q19.85 44 16.2 42.425Q12.55 40.85 9.85 38.15Q7.15 35.45 5.575 31.8Q4 28.15 4 24Q4 19.85 5.575 16.2Q7.15 12.55 9.85 9.85Q12.55 7.15 16.2 5.575Q19.85 4 24 4Q28.15 4 31.8 5.575Q35.45 7.15 38.15 9.85Q40.85 12.55 42.425 16.2Q44 19.85 44 24Q44 28.15 42.425 31.8Q40.85 35.45 38.15 38.15Q35.45 40.85 31.8 42.425Q28.15 44 24 44Z"/></svg>
+                </span>
+            </div>
+            <form action="">
+                <label for="inputModa" class="section-moda-label">
+                    Ingrese los numeros a calcular la mediana, en el mismo espacio ponga todos los numero y separelos con comas " , "    
+                </label>
+                <div class="section-moda-input">
+                    <input id="inputModa" type="text" placeholder="Ej: 20, 10, 50" >
+                </div>
+                <button class="section-moda-button" type="button" onclick="calcularModa()">Calcular la moda</button>
+                <div class="section-moda-content">
+                    <p>Resultado:</p>
+                    <p id="resultadoModa"></p>
+                </div>
+            </form>   
+        </section>
+    </main>
+    
+    <script src="./script/statistics.js"></script>
+</body>
+</html>
