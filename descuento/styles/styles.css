@@ -48,14 +48,14 @@ svg {
 }
 
 .header-nav {
-    width: 55%;
+    width: 50%;
     display: flex;
-    align-items: center;
 }
 
 .nav-items {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     list-style: none;
 }
 
@@ -71,7 +71,7 @@ svg {
 .nav-items li a {
     color: var(--color);
     text-decoration: none;
-    padding: 3px;
+    margin: 0px 5px;
 }
 
 .nav-items li a:hover {
@@ -195,6 +195,52 @@ svg {
     margin: 10px 0px;
 }
 
+.footer {
+    width: 100%;
+    height: 30vh;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fill, 320px);
+    box-shadow: 8px 0px 8px #333;
+    margin-top: 40px;
+}
+
+.footer .footer-author {
+    display: flex;
+    justify-content: center;
+    font-size: var(--md);
+    font-weight: 500;
+    text-align: center;
+    color: var(--color);
+}
+
+.footer .footer-info {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-info ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.footer-info ul li {
+    font-size: var(--sm);
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.footer-info ul li a {
+    text-decoration: none;
+    color: var(--color);
+    transition: all 300ms;
+}
+
+.footer-info ul li a:hover {
+    color: #333;
+}
+
 @media (min-width:500px) {
     .header-logo {
         width: auto;
@@ -235,5 +281,23 @@ svg {
     .main-section-button {
         margin: 20px auto;
         display: block;
+    }
+
+    .footer .footer-author {
+        align-items: center;
+    }
+
+    .footer .footer-info {
+        align-items: center;
+    }
+}
+
+@media (min-width:960px) {
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer .footer-info ul li {
+        font-size: var(--md);
     }
 }
