@@ -45,7 +45,7 @@
                     <input id ="inputCuadrado" type="number" placeholder="Ej: 3">
                 </div>
                 <button class="main-section-button" type="button" onclick="calcularCuadrado()">Calcular perimetro y área</button>
-                <button class="main-section-button" type="buttonCleanCuadrado" onclick="cleanCuadrado()">Limpiar</button>
+                <button class="main-section-button" type="button" id="limpiar" onclick="limpiarCuadrado()">Limpiar</button> 
                 <div class="main-section-content-result">
                     <p>Resultado:</p>
                     <p id="resultPerimetroCuadrado"></p>
@@ -67,7 +67,7 @@
                     <input type="number" id="inputCirculo" placeholder="Ej: 4">
                 </div>
                 <button class="main-section-button" type="button" onclick="calcularCirculo()">Calcular perimetro y área</button>
-                <button class="main-section-button" id="buttonCleanCirculo" type="button" onclick="cleanCirculo()">Limpiar</button>
+                <button class="main-section-button" type="button" id="limpiar" onclick="limpiarCirculo()">Limpiar</button> 
                 <div class="main-section-content-result">
                     <p>Resultado:</p>
                     <p id="resultPerimetroCirculo"></p>
@@ -101,10 +101,9 @@
                     <input id="inputTrianguloAltura" type="number" placeholder="Ej: 2">
                 </div>
                 <button class="main-section-button" type="button" onclick="calcularTriangulo()">Calcular perimetro y área</button>
-                <button class="main-section-button" type="button" id="buttonCleanTriangulo" onclick="cleanTriangulo()">Limpiar</button> 
+                <button class="main-section-button" type="button" id="limpiar" onclick="limpiarTriangulo()">Limpiar</button> 
                 <div class="main-section-content-result">
                     <p>Resultado:</p>
-                    <p id="resultIsoceles"></p>
                     <p id="resultPerimetroTriangulo"></p>
                     <p id="resultAreaTriangulo"></p>
                 </div>

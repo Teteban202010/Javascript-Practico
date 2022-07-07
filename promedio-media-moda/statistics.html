@@ -9,7 +9,7 @@
     <title>Promedio mediana y moda</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="statistics">
         <div class="header-logo">
             <span>Estadistica</span>
             <span class="header-calculator">
@@ -56,6 +56,7 @@
                 <button class="section-promedio-button" type="button" onclick="calcularPromedio()">
                     Calcular promedio
                 </button>
+                <button class="section-promedio-button" type="button" onclick="limpiarPromedio()">Limpiar</button> 
                 <div class="section-promedio-content">
                     <p>Resultado:</p>
                     <p id="resultPromedio"></p>
@@ -78,6 +79,7 @@
                     <input id="inputMediana" type="text" placeholder="Ej: 10, 20, 30" >
                 </div>
                 <button class="section-mediana-button" type="button" onclick="calcularMediana()">Calcular la Mediana</button>
+                <button class="section-promedio-button" type="button" onclick="limpiarMediana()">Limpiar</button> 
                 <div class="section-mediana-content">
                     <p>Resultado:</p>
                     <p id="resultadoMediana"></p>
@@ -100,6 +102,7 @@
                     <input id="inputModa" type="text" placeholder="Ej: 20, 10, 50" >
                 </div>
                 <button class="section-moda-button" type="button" onclick="calcularModa()">Calcular la moda</button>
+                <button class="section-promedio-button" type="button" onclick="limpiarModa()">Limpiar</button> 
                 <div class="section-moda-content">
                     <p>Resultado:</p>
                     <p id="resultadoModa"></p>
@@ -113,13 +116,13 @@
         <div class="footer-info">
             <ul>
                 <li>
-                    <a href="#home">Home</a>
+                    <a href="../index.html">Home</a>
                 </li>
                 <li>
-                    <a href="#figure">Figuras</a>
+                    <a href="../figuras/figure.html">Figuras</a>
                 </li>
                 <li>
-                    <a href="#discount">Descuentos</a>
+                    <a href="../descuento/discount.html">Descuentos</a>
                 </li>
                 <li>
                     <a href="#statistics">Promedio mediana y moda</a>

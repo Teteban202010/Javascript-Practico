@@ -65,3 +65,9 @@ const onClickButtonPriceDiscount = () => {
   const resultP = document.getElementById("ResultP");
   resultP.innerText = "El precio con descuento son: $" + precio;
 };
+
+const limpiar = () => {
+  document.getElementById("inputPrice").value = "";  
+  document.getElementById("inputCoupon").value = "";  
+  document.getElementById("ResultP").innerText = "";
+}
